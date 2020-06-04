@@ -14,10 +14,23 @@ import { OrdersComponent } from './components/orders/orders.component';
 import { ProductsComponent } from './components/products/products.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, LoginComponent, SignUpComponent, LogoutComponent, CartComponent, AccountComponent, OrdersComponent, ProductsComponent, NavbarComponent, NotFoundComponent],
-  imports: [BrowserModule, AppRoutingModule, NgbModule],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    LoginComponent,
+    SignUpComponent,
+    LogoutComponent,
+    CartComponent,
+    AccountComponent,
+    OrdersComponent,
+    ProductsComponent,
+    NavbarComponent,
+    NotFoundComponent,
+  ],
+  imports: [BrowserModule, AppRoutingModule, NgbModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
