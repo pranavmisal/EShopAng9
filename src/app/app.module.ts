@@ -15,6 +15,7 @@ import { ProductsComponent } from './components/products/products.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { FormsModule } from '@angular/forms';
+import { AngularFireModule } from '@angular/fire';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,22 @@ import { FormsModule } from '@angular/forms';
     NavbarComponent,
     NotFoundComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, NgbModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NgbModule,
+    FormsModule,
+    AngularFireModule.initializeApp({
+      apiKey: 'AIzaSyAdbVKLt83DprcTGTq7WUT3E2MdFsbF9F8',
+      authDomain: 'eshopapp-7cad9.firebaseapp.com',
+      databaseURL: 'https://eshopapp-7cad9.firebaseio.com',
+      projectId: 'eshopapp-7cad9',
+      storageBucket: 'eshopapp-7cad9.appspot.com',
+      messagingSenderId: '411910562836',
+      appId: '1:411910562836:web:1efc39908aae8a95bef301',
+      measurementId: 'G-36SBTK0MKG',
+    }),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
