@@ -1,3 +1,4 @@
+import { AngularFireAuthModule } from '@angular/fire/auth';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -16,7 +17,10 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { FormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
-import { AngularFirestore } from '@angular/fire/firestore';
+import {
+  AngularFirestore,
+  AngularFirestoreModule,
+} from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -47,6 +51,9 @@ import { AngularFirestore } from '@angular/fire/firestore';
       appId: '1:411910562836:web:1efc39908aae8a95bef301',
       measurementId: 'G-36SBTK0MKG',
     }),
+    // AngularFirestore
+    AngularFirestoreModule,
+    AngularFireAuthModule,
   ],
   providers: [AngularFirestore],
   bootstrap: [AppComponent],
