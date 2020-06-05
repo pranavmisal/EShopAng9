@@ -10,7 +10,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  signup(form) {
+  login(form) {
     console.log(form);
   }
 }

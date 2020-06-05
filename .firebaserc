@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "eshopapp-7cad9": {
+      "hosting": {
+        "Ecommerce-app": [
+          "eshopapp-7cad9"
+        ]
+      }
+    }
+  }
+}
