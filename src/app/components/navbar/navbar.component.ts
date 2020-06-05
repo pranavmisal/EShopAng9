@@ -1,3 +1,4 @@
+import { AuthService } from './../../services/auth.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit {
-  constructor() {}
+  isUser: boolean = false;
+
+  constructor(private as: AuthService) {}
 
   isOpen: boolean = false;
 
@@ -14,5 +17,19 @@ export class NavbarComponent implements OnInit {
     this.isOpen = !this.isOpen;
   }
 
-  ngOnInit(): void {}
+  ngOnInit() {
+    this.as.user.subscribe((user) => {
+      if (user) {
+        this.isUser = true;
+        // console.log(this.isUser);
+      } else {
+        this.isUser = false;
+        // console.log(this.isUser);
+      }
+    });
+  }
+
+  logout() {
+    this.as.logout();
+  }
 }

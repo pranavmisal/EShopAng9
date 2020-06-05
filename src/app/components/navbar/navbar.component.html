@@ -12,37 +12,38 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" routerLink="/account" routerLinkActive="Active">
+                <a class="nav-link" routerLink="/account" routerLinkActive="Active" *ngIf="isUser">
                     Account
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" routerLink="/cart" routerLinkActive="Active">
+                <a class="nav-link" routerLink="/cart" routerLinkActive="Active" *ngIf="isUser">
                     Cart
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" routerLink="/orders" routerLinkActive="Active">
+                <a class="nav-link" routerLink="/orders" routerLinkActive="Active" *ngIf="isUser">
                     Orders
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" routerLink="/products" routerLinkActive="Active">
+                <a class="nav-link" routerLink="/products" routerLinkActive="Active" *ngIf="!isUser">
                     Products
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" routerLink="/login" routerLinkActive="Active">
+                <a class="nav-link" routerLink="/login" routerLinkActive="Active" *ngIf="!isUser">
                     Login
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" routerLink="/signup" routerLinkActive="Active">
+                <a class="nav-link" routerLink="/signup" routerLinkActive="Active" *ngIf="!isUser">
                     SignUp
                 </a>
             </li>
             <li class="nav-item">
-                <a class="btn btn-danger" routerLink="/logout" routerLinkActive="Active">
+                <a class="btn btn-danger" routerLink="/logout" routerLinkActive="Active" (click)='logout()'
+                    *ngIf="isUser">
                     Logout
                 </a>
             </li>
