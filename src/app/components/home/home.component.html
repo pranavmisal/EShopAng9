@@ -5,7 +5,7 @@
                 <img [src]="p.ProductPath" class="card-img-top" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">{{ p.Name }}</h5>
-                    <p class="card-text">{{ p.Price | currency }}</p>
+                    <p class="card-text">{{ p.Price | currency:'INR' }}</p>
                     <button class="btn btn-primary" (click)="addToCart(i)" *ngIf="add !==i">Add to cart</button>
 
                     <div class="mt-2" *ngIf="add === i">
