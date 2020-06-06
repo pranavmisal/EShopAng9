@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class AuthService {
   user: Observable<firebase.User>;
+  userId: string = '';
   constructor(private fauth: AngularFireAuth) {
     this.user = fauth.user;
   }

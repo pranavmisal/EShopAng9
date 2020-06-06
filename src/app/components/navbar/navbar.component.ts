@@ -21,9 +21,11 @@ export class NavbarComponent implements OnInit {
     this.as.user.subscribe((user) => {
       if (user) {
         this.isUser = true;
+        this.as.userId = user.uid;
         // console.log(this.isUser);
       } else {
         this.isUser = false;
+        this.as.userId = '';
         // console.log(this.isUser);
       }
     });
